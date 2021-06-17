@@ -5,9 +5,10 @@ def check_rounds():
     response = input("How many rounds would you like to play? ")
     round_error = "Please type a number that is more than 0 and less than equal to 10"
     if response == "":
+      response = int(response)
       print(round_error)
       continue
-    elif response !="":
+    if response !="":
       try:
         response = int(response)
 
@@ -22,10 +23,6 @@ def check_rounds():
         print(round_error)
         continue
     return response
-    if response == "":
-      print(round_error)
-      continue
-
 
 #Main routine goes here
 
@@ -43,7 +40,7 @@ while end_game == "no":
 
   print(heading)
   choose = input("{} or 'xxx' to end: ".format(choose_instruction))
-
+  rounds_played += 1
   # End game if exit code is typed
   if choose == "xxx":
     break
