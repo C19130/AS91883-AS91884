@@ -10,4 +10,3 @@ for item in range(rounds):
   question_1 = random.choice(questions)
   print(question_1)
   questions.remove(question_1)
-  print(questions)

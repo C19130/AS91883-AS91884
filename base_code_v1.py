@@ -1,9 +1,13 @@
 import random
 
-questions = ["What’s te reo Māori for ocean?", "What's the job of the macron", "What's the translation for'hei tiki'?", "What would be stored in a pātaka?", "How many kiwi are in this pikitia (picture)?", "What would you catch with a pā kahawai?", "If you gave a donation, gift, or contribution, you would have given a...?", "What colour is the underside of the ponga frond?", "What hākinakina (sport) is being played in this photo?", "When would you say 'kia ora'?"]
+question_list = ["What’s te reo Māori for ocean?", "What's the job of the macron", "What's the translation for'hei tiki'?", "What would be stored in a pātaka?", "How many kiwi are in this pikitia (picture)?", "What would you catch with a pā kahawai?", "If you gave a donation, gift, or contribution, you would have given a...?", "What colour is the underside of the ponga frond?", "What hākinakina (sport) is being played in this photo?", "When would you say 'kia ora'?"]
 
 
 # functions go here
+def question_rand():
+  question_1 = random.choice(question_list)
+  print(question_1)
+  question_list.remove(question_1)
 
 def check_rounds():
   while True:
@@ -32,7 +36,7 @@ def check_rounds():
 #Main routine goes here
 
 rounds_played = 0
-choose_instruction = "Question goes here"
+choose_instruction = "print multi choice here"
 
 #ask user for # rounds
 rounds = check_rounds()
@@ -44,7 +48,8 @@ while end_game == "no":
   heading = "Round {} of {}".format(rounds_played + 1, rounds)
 
   print(heading)
-  choose = input("{} or 'xxx' to end: ".format(     ))
+  print(question_rand())
+  choose = input("{} or 'xxx' to end: ".format(choose_instruction))
   rounds_played += 1
   # End game if exit code is typed
   if choose == "xxx":
