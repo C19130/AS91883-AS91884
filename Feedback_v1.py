@@ -35,4 +35,4 @@ while end_game == "no":
 
 if answer_setup == "What’s te reo Māori for ocean?":
   if choose == "moana":
-    print("good")
+    print("that answer was correct")
