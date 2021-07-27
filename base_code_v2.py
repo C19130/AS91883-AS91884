@@ -31,6 +31,9 @@ def check_rounds():
     return response
 
 #Main routine goes here
+
+score_count = 0
+
 rounds_played = 0
 
 random.shuffle(question_list)
@@ -53,9 +56,11 @@ while end_game == "no":
   # rest of loop / game
   print("you chose {}".format(choose))
   if choose == question_list[rounds_played]['answer']:
-    print("Good Job! That was the correct answer")
+    score_count += 1
+    print("Good Job! That was the correct answer, your score is {}".format(score_count))
   if choose != question_list[rounds_played]['answer']:
     print("Thats incorrect, the correct answer is {}".format(question_list[rounds_played]['answer']))
+    print("Your score is {}".format(score_count))
   rounds_played += 1
   if rounds_played == rounds:
     break
