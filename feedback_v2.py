@@ -29,10 +29,11 @@ while end_game == "no":
     print("Good Job! That was the correct answer")
   if choose != question_list[rounds_played]['answer']:
     if choose == "xxx":
+      print("Thank You For Playing")
       break
     else:
       print("Thats incorrect, the correct answer is '{}'".format(question_list[rounds_played]['answer']))
   rounds_played += 1
   if rounds_played == rounds:
     break
-  # End game if exit code is typed
+  # End game if round limit is exceeded

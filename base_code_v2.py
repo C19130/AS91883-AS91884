@@ -56,14 +56,13 @@ while end_game == "no":
   # rest of loop / game
   print("you chose {}".format(choose))
   if choose == question_list[rounds_played]['answer']:
-    score_count += 1
-    print("Good Job! That was the correct answer, your score is {}".format(score_count))
+    print("Good Job! That was the correct answer")
   if choose != question_list[rounds_played]['answer']:
-    print("Thats incorrect, the correct answer is {}".format(question_list[rounds_played]['answer']))
-    print("Your score is {}".format(score_count))
+    if choose == "xxx":
+      break
+    else:
+      print("Thats incorrect, the correct answer is '{}'".format(question_list[rounds_played]['answer']))
   rounds_played += 1
   if rounds_played == rounds:
     break
-  # End game if exit code is typed
-  if choose == "xxx":
-    break
+  # End game if round limit is exceeded
