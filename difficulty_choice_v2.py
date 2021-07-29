@@ -15,7 +15,7 @@ q_list_hard = {
 def check_rounds():
   while True:
     response = input("How many rounds would you like to play? ")
-    round_error = "Please type a number that is more than 0 and less than equal to 10"
+    round_error = "Please type a number that is more than 0 and less than equal to 5"
     if response == "":
       response = int(response)
       print(round_error)
@@ -109,6 +109,6 @@ while end_game == "no":
         print("Your score is {}".format(score_count))
     rounds_played += 1
 
-
+  
   if rounds_played == rounds:
     break
