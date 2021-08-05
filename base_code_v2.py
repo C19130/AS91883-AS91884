@@ -1,14 +1,15 @@
 """ Te Reo Quiz, Cade Young, ......... """
+"Questions from MaiFM and TePapa"
 import random
 
 q_list_easy = {
-  0 : {"question" : "What’s te reo Māori for ocean?", "answer" : "moana"}, 1 : {"question" : "What's te reo Māori for six?", "answer" : "ono"}, 2 : {"question" : "When would you say 'kia ora'?, when you're saying hello to someone, when you're wishing someone good health, when you're agreeing with someone or all of the above", "answer" : "all of the above"}, 3 : {"question" : "4e", "answer" : "4e"}, 4 : {"question" : "5e", "answer" : "5e"}}
+  0 : {"question" : "What’s te reo Māori for ocean?", "answer" : "moana"}, 1 : {"question" : "What's te reo Māori for six?", "answer" : "ono"}, 2 : {"question" : "When would you say 'kia ora'?, when you're saying hello to someone, when you're wishing someone good health, when you're agreeing with someone or all of the above", "answer" : "all of the above"}, 3 : {"question" : "What's the second line of our National Anthem?", "answer" : "o nga iwi matou ra"}, 4 : {"question" : "What is red in Te Reo Maori", "answer" : "whero"}}
 
 q_list_medium = {
   0 : {"question" : "What's the job of the macron?", "answer" : "to lengthen the vowel"}, 1 : {"question" : "What would you catch with a pā kahawai? a) pekeketua b) ika c) manu", "answer" : "2m"}, 2 : {"question" : "If you gave a donation, gift, or contribution, you would have given a...?", "answer" : "koha"}, 3 : {"question" : "4m", "answer" : "4m"}, 4 : {"question" : "What colour is the underside of the ponga frond?hiriwa, kakariki or pango ", "answer" : "hiriwa"}}
 
 q_list_hard = {
-  0 : {"question" : "What's the translation for 'hei tiki'?", "answer" : "neck pendant of human form"}, 1 : {"question" : "What would be stored in a pātaka? pukapuka, kai or waka", "answer" : "kai"}, 2 : {"question" : "What's the te reo Māori name for Rugby Union", "answer" : "hutuporo"}, 3 : {"question" : "4h", "answer" : "4h"}, 4 : {"question" : "5h", "answer" : "5h"}}
+  0 : {"question" : "What's the translation for 'hei tiki'?", "answer" : "neck pendant of human form"}, 1 : {"question" : "What would be stored in a pātaka? pukapuka, kai or waka", "answer" : "kai"}, 2 : {"question" : "What's the te reo Māori name for Rugby Union", "answer" : "hutuporo"}, 3 : {"question" : "If it's Ua it is what?", "answer" : "Rainy"}, 4 : {"question" : "If you were going for a hīkoi you are...", "answer" : "Going for a walk"}}
 
 
 # functions go here
