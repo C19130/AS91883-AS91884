@@ -1,9 +1,12 @@
 """ Te Reo Quiz, Cade Young, ......... """
 "Questions from MaiFM and TePapa"
 import random
+import os
+import time
+
 
 q_list_easy = {
-  0 : {"question" : "What’s te reo Māori for ocean?", "answer" : "moana"}, 1 : {"question" : "What's te reo Māori for six?", "answer" : "ono"}, 2 : {"question" : "When would you say 'kia ora'?, when you're saying hello to someone, when you're wishing someone good health, when you're agreeing with someone or all of the above", "answer" : "all of the above"}, 3 : {"question" : "What's the second line of our National Anthem?", "answer" : "o nga iwi matou ra"}, 4 : {"question" : "What is red in Te Reo Maori", "answer" : "whero"}}
+  0 : {"question" : "What’s te reo Māori for ocean?", "answer" : "moana"}, 1 : {"question" : "What's te reo Māori for six?", "answer" : "ono"}, 2 : {"question" : "When would you say 'kia ora'? when you're saying hello to someone, when you're wishing someone good health, when you're agreeing with someone or all of the above", "answer" : "all of the above"}, 3 : {"question" : "What's the second line of the New Zealand National Anthem?", "answer" : "o nga iwi matou ra"}, 4 : {"question" : "What is red in Te Reo Maori", "answer" : "whero"}}
 
 q_list_medium = {
   0 : {"question" : "What's the job of the macron?", "answer" : "to lengthen the vowel"}, 1 : {"question" : "What would you catch with a pā kahawai? a) pekeketua b) ika c) manu", "answer" : "2m"}, 2 : {"question" : "If you gave a donation, gift, or contribution, you would have given a...?", "answer" : "koha"}, 3 : {"question" : "4m", "answer" : "4m"}, 4 : {"question" : "What colour is the underside of the ponga frond?hiriwa, kakariki or pango ", "answer" : "hiriwa"}}
@@ -39,9 +42,16 @@ def check_rounds():
 
 #Main routine goes here
 
-print("***in this quiz you will be asked differant questions based off of Te Reo Maori.")
-print("please answer the questions exactly as they are written in the question***")
-print()
+def instructions():
+  print(">>>>>How To Play<<<<<")
+  print("Choose the difficulty you want to play with")
+  print("Choose the amount of rounds you want to play, between 1 - 5")
+  print("Answer the questions exactly as they are written")
+  time.sleep(5)
+  os.system('clear')
+  return ""
+
+instructions()
 
 while True:
   difficulty = input("Would you like to play on easy, medium, or hard: ").lower()
@@ -58,7 +68,7 @@ while True:
     print("Please choose one of the given difficulties")
 print()
 
-
+os.system('clear')
 
 
 score_count = 0
@@ -70,6 +80,8 @@ random.shuffle(q_list_medium)
 random.shuffle(q_list_hard)
 
 rounds = check_rounds()
+
+os.system('clear')
 
 answer_setup = (q_list_easy[rounds_played], q_list_medium[rounds_played], q_list_hard[rounds_played])
 
@@ -95,40 +107,53 @@ while end_game == "no":
   if difficulty == "easy":
     if choose == q_list_easy[rounds_played]['answer']:
       score_count += 1
-      print("Good Job! That was the correct answer, your score is {}".format(score_count))
+      print("Good Job! That was the correct answer")
+      time.sleep(2)
+      os.system('clear')
     if choose != q_list_easy[rounds_played]['answer']:
       if choose == "xxx":
         break
       else:
         print("Thats incorrect, the correct answer is {}".format(q_list_easy[rounds_played]['answer']))
-        print("Your score is {}".format(score_count))
+        time.sleep(2)
+        os.system('clear')
     rounds_played += 1
 
 
   if difficulty == "medium":
     if choose == q_list_medium[rounds_played]['answer']:
       score_count += 1
-      print("Good Job! That was the correct answer, your score is {}".format(score_count))
+      print("Good Job! That was the correct answer")
+      time.sleep(2)
+      os.system('clear')
     if choose != q_list_medium[rounds_played]['answer']:
       if choose == "xxx":
         break
       else:
         print("Thats incorrect, the correct answer is {}".format(q_list_medium[rounds_played]['answer']))
-        print("Your score is {}".format(score_count))
+        time.sleep(2)
+        os.system('clear')
     rounds_played += 1
 
 
   if difficulty == "hard":
     if choose == q_list_hard[rounds_played]['answer']:
       score_count += 1
-      print("Good Job! That was the correct answer, your score is {}".format(score_count))
+      print("Good Job! That was the correct answer")
+      time.sleep(2)
+      os.system('clear')
     if choose != q_list_hard[rounds_played]['answer']:
       if choose == "xxx":
         break
       else:
         print("Thats incorrect, the correct answer is {}".format(q_list_hard[rounds_played]['answer']))
-        print("Your score is {}".format(score_count))
+        time.sleep(2)
+        os.system('clear')
     rounds_played += 1
 
   if rounds_played == rounds:
     break
+
+
+os.system('clear')
+print("Your final score is {}/{}".format(score_count, rounds_played))
